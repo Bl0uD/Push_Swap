@@ -6,7 +6,7 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 21:50:17 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/08 21:51:24 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/08 22:45:06 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int	ps_pa(t_stack **stack_a, t_stack **stack_b)
 	ft_putendl_fd("pa", 1);
 	return (0);
 }
+
 int	ps_pb(t_stack **stack_a, t_stack **stack_b)
 {
 	if (ps_push(stack_b, stack_a) == -1)
