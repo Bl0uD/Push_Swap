@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:47 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/10/28 20:00:13 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:52:43 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../libft.h"
 
-void	print_stack(t_stack *stack, char name)
+size_t	ft_strlen(const char *str)
 {
-	printf("Stack %c: ", name);
-	while (stack)
-	{
-		printf("%d ", stack->value);
-		stack = stack->next;
-	}
-	printf("\n");
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }

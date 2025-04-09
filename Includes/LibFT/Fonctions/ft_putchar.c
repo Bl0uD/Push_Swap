@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:47 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/10/28 19:34:51 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:51:46 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../libft.h"
+#include <unistd.h>
 
-void	print_stack(t_stack *stack, char name)
+void	ft_putchar(char c)
 {
-	printf("Stack %c: ", name);
-	while (stack)
-	{
-		printf("%d ", stack->value);
-		stack = stack->next;
-	}
-	printf("\n");
+	write(1, &c, 1);
 }

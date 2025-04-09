@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:47 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/11/12 23:18:09 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:51:10 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../libft.h"
 
-void	print_stack(t_stack *stack, char name)
+t_list	*ft_lstlast(t_list *lst)
 {
-	printf("Stack %c: ", name);
-	while (stack)
-	{
-		printf("%d ", stack->value);
-		stack = stack->next;
-	}
-	printf("\n");
+	if (!lst)
+		return (lst);
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }

@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:47 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/10/28 19:34:34 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:51:32 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../libft.h"
+#include <stdlib.h>
+#include <stdio.h>
 
-void	print_stack(t_stack *stack, char name)
+void	ft_memdel(void **ap)
 {
-	printf("Stack %c: ", name);
-	while (stack)
+	if (ap && *ap)
 	{
-		printf("%d ", stack->value);
-		stack = stack->next;
+		free(*ap);
+		*ap = NULL;
 	}
-	printf("\n");
 }
+/*
+int	main(void)
+{
+	void *ptr = malloc(10);
+	ft_memdel(&ptr);
+
+	printf("ft_memdel = %p", ptr);
+	printf("\n");
+	return (0);
+}*/

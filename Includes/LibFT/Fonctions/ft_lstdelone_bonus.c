@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:47 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/11/12 23:18:39 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:51:06 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../libft.h"
 
-void	print_stack(t_stack *stack, char name)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	printf("Stack %c: ", name);
-	while (stack)
-	{
-		printf("%d ", stack->value);
-		stack = stack->next;
-	}
-	printf("\n");
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
 }

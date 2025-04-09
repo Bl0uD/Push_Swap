@@ -1,24 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:47 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/09/09 10:04:20 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:50:04 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-void	print_stack(t_stack *stack, char name)
+int	ft_atoi(const char *str)
 {
-	printf("Stack %c: ", name);
-	while (stack)
+	int	i;
+	int	sign;
+	int	res;
+
+	i = 0;
+	sign = 1;
+	res = 0;
+	while (ft_isspace(str[i]))
+		i++;
+	if (str[i] && (str[i] == '-' || str[i] == '+'))
 	{
-		printf("%d ", stack->value);
-		stack = stack->next;
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
 	}
-	printf("\n");
+	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
+	{
+		res = res * 10 + str[i] - '0';
+		i++;
+	}
+	return (sign * res);
 }

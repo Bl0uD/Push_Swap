@@ -6,7 +6,7 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 16:42:36 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/08 22:33:07 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/09 02:03:44 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
-# include "libft.h"
+# include "LibFT/libft.h"
 
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648

@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:47 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/11/05 21:18:26 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:52:41 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../libft.h"
+#include <string.h>
 
-void	print_stack(t_stack *stack, char name)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	printf("Stack %c: ", name);
-	while (stack)
+	size_t	i;
+
+	i = 0;
+	if (dstsize > 0)
 	{
-		printf("%d ", stack->value);
-		stack = stack->next;
+		while (i < dstsize - 1 && src[i])
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	printf("\n");
+	return (ft_strlen(src));
 }

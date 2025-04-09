@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:47 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/10/28 19:59:20 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:52:39 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../libft.h"
+#include <string.h>
 
-void	print_stack(t_stack *stack, char name)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	printf("Stack %c: ", name);
-	while (stack)
+	size_t	dst_len;
+	size_t	i;
+
+	i = 0;
+	dst_len = (size_t)ft_strlen(dst);
+	if (size <= (size_t)ft_strlen(dst))
+		return ((size_t)ft_strlen(src) + size);
+	while (src[i] && dst_len + i < size - 1)
 	{
-		printf("%d ", stack->value);
-		stack = stack->next;
+		dst[dst_len + i] = src[i];
+		i++;
 	}
-	printf("\n");
+	dst[dst_len + i] = '\0';
+	return (dst_len + (size_t)ft_strlen(src));
 }

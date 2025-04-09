@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:47 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/10/28 19:35:11 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:51:53 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../libft.h"
 
-void	print_stack(t_stack *stack, char name)
+void	ft_putnbr_fd(int n, int fd)
 {
-	printf("Stack %c: ", name);
-	while (stack)
+	long	nb;
+
+	nb = n;
+	if (nb < 0)
 	{
-		printf("%d ", stack->value);
-		stack = stack->next;
+		nb *= -1;
+		ft_putchar_fd('-', fd);
 	}
-	printf("\n");
+	if (nb < 10)
+		ft_putchar_fd((char)(nb + '0'), fd);
+	else
+	{
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putchar_fd((char)((nb % 10) + '0'), fd);
+	}
 }

@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:47 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/10/28 19:35:05 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:51:50 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../libft.h"
 
-void	print_stack(t_stack *stack, char name)
+void	ft_putendl(char const *s)
 {
-	printf("Stack %c: ", name);
-	while (stack)
+	if (!s)
+		return ;
+	while (*s)
 	{
-		printf("%d ", stack->value);
-		stack = stack->next;
+		write(1, &*s, 1);
+		s++;
 	}
-	printf("\n");
+	write(1, "\n", 1);
 }

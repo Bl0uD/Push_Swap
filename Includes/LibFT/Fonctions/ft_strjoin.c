@@ -1,24 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:47 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/10/28 19:36:10 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:52:37 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../libft.h"
 
-void	print_stack(t_stack *stack, char name)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	printf("Stack %c: ", name);
-	while (stack)
+	size_t	i;
+	char	*str;
+
+	if (!s1 || !s2)
+		return (NULL);
+	i = 0;
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!str)
+		return (NULL);
+	while (i < ft_strlen(s1))
 	{
-		printf("%d ", stack->value);
-		stack = stack->next;
+		str[i] = s1[i];
+		i++;
 	}
-	printf("\n");
+	while (i < (ft_strlen(s1) + ft_strlen(s2)))
+	{
+		str[i] = s2[i - ft_strlen(s1)];
+		i++;
+	}
+	str[i] = 0;
+	return (str);
 }

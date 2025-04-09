@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:47 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/11/12 23:17:55 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:51:17 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../libft.h"
 
-void	print_stack(t_stack *stack, char name)
+int	ft_lstsize(t_list *lst)
 {
-	printf("Stack %c: ", name);
-	while (stack)
+	size_t	i;
+
+	i = 0;
+	while (lst)
 	{
-		printf("%d ", stack->value);
-		stack = stack->next;
+		lst = lst->next;
+		i++;
 	}
-	printf("\n");
+	return (i);
 }

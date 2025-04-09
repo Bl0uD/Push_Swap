@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:47 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/11/12 23:18:50 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:51:03 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../libft.h"
 
-void	print_stack(t_stack *stack, char name)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	printf("Stack %c: ", name);
-	while (stack)
+	t_list	*tmp;
+
+	tmp = *lst;
+	if (!lst || !del)
+		return ;
+	while (tmp != NULL)
 	{
-		printf("%d ", stack->value);
-		stack = stack->next;
+		*lst = (*lst)->next;
+		del(tmp->content);
+		free(tmp);
+		tmp = *lst;
 	}
-	printf("\n");
 }

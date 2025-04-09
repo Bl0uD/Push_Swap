@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:47 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/11/08 19:00:45 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:50:33 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../libft.h"
 
-void	print_stack(t_stack *stack, char name)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	printf("Stack %c: ", name);
-	while (stack)
+	unsigned char	*res;
+
+	if (nmemb == 0 || size == 0)
 	{
-		printf("%d ", stack->value);
-		stack = stack->next;
+		res = malloc(nmemb * size * 1);
+		if (!res)
+			return (NULL);
+		return (res);
 	}
-	printf("\n");
+	if (nmemb * size > __INT_MAX__)
+		return (NULL);
+	res = (void *)malloc(nmemb * size);
+	if (!res)
+		return (NULL);
+	ft_bzero(res, nmemb * size);
+	return (res);
 }

@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:47 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/10/28 19:35:41 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:52:12 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../libft.h"
 
-void	print_stack(t_stack *stack, char name)
+void	ft_strclr(char *s)
 {
-	printf("Stack %c: ", name);
-	while (stack)
+	size_t	i;
+
+	i = 0;
+	while (s[i])
 	{
-		printf("%d ", stack->value);
-		stack = stack->next;
+		s[i] = '\0';
+		i++;
 	}
-	printf("\n");
 }

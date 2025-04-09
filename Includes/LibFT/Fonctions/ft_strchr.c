@@ -1,24 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:47 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/10/28 19:58:35 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:52:10 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../libft.h"
+#include <stdio.h>
+#include <string.h>
 
-void	print_stack(t_stack *stack, char name)
+char	*ft_strchr(const char *s, int c)
 {
-	printf("Stack %c: ", name);
-	while (stack)
+	if ((unsigned char)c == '\0')
+		return ((char *)s + ft_strlen(s));
+	while (*s)
 	{
-		printf("%d ", stack->value);
-		stack = stack->next;
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
 	}
-	printf("\n");
+	return (NULL);
 }
+/*
+int	main(void)
+{
+	char	*str = "teste";
+	int		c;
+
+	c = 1024;
+	printf("my owm : %p\n",ft_strchr(str, c));
+	printf("real : %p\n",strchr(str, c));
+	return (0);
+}
+*/

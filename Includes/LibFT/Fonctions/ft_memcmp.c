@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:47 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/10/28 19:49:43 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:51:28 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../libft.h"
 
-void	print_stack(t_stack *stack, char name)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	printf("Stack %c: ", name);
-	while (stack)
+	size_t			i;
+	unsigned char	*ps1;
+	unsigned char	*ps2;
+
+	i = 0;
+	ps1 = (unsigned char *)s1;
+	ps2 = (unsigned char *)s2;
+	while (i < n)
 	{
-		printf("%d ", stack->value);
-		stack = stack->next;
+		if (ps1[i] != ps2[i])
+			return (ps1[i] - ps2[i]);
+		i++;
 	}
-	printf("\n");
+	return (0);
 }

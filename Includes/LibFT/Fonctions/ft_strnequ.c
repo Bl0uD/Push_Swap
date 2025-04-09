@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:47 by jdupuis          ###   ########.fr       */
+/*   Created: 2024/10/28 19:36:28 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:53:03 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../libft.h"
 
-void	print_stack(t_stack *stack, char name)
+int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	printf("Stack %c: ", name);
-	while (stack)
+	size_t	i;
+
+	i = 0;
+	if (n < 1)
+		return (1);
+	if (!s1 || !s2)
+		return (0);
+	while (s1[i] && i <= n)
 	{
-		printf("%d ", stack->value);
-		stack = stack->next;
+		if (s1[i] != s2[i])
+			return (0);
+		i++;
 	}
-	printf("\n");
+	return (1);
 }

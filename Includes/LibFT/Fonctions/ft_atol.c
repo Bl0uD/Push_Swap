@@ -1,0 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/08 15:24:32 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/09 01:50:24 by jdupuis          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+long	ft_atol(char *str)
+{
+	long long	i;
+	long long	sign;
+	long long	res;
+
+	i = 0;
+	sign = 1;
+	res = 0;
+	while (ft_isspace(str[i]))
+		i++;
+	if (str[i] && (str[i] == '-' || str[i] == '+'))
+	{
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
+	}
+	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
+	{
+		res = res * 10 + str[i] - '0';
+		i++;
+	}
+	return ((long)(res * sign));
+}
