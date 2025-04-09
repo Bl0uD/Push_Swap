@@ -6,34 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 20:07:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 02:06:50 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/09 02:21:40 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Includes/push_swap.h"
-
-long	ft_atol(const char *str)
-{
-	long long	i;
-	long long	sign;
-	long long	res;
-
-	i = 0;
-	sign = 1;
-	res = 0;
-	if (str[i] && (str[i] == '-' || str[i] == '+'))
-	{
-		if (str[i] == '-')
-			sign *= -1;
-		i++;
-	}
-	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
-	{
-		res = res * 10 + str[i] - '0';
-		i++;
-	}
-	return ((long)(res * sign));
-}
 
 static int	is_number(char *str)
 {
