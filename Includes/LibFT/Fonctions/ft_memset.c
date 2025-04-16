@@ -6,14 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:57:10 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:51:38 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 16:01:16 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "../Includes/libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

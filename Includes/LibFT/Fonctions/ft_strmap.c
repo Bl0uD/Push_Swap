@@ -6,11 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:36:17 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:52:45 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:56:44 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../Includes/libft.h"
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {

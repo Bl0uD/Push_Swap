@@ -6,13 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:49:21 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:51:25 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 16:00:43 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <stdio.h>
-#include <string.h>
+#include "../Includes/libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

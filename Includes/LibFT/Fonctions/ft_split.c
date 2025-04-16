@@ -6,11 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 12:10:58 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:52:02 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:56:06 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../Includes/libft.h"
 
 void	ft_free(char **tab)
 {

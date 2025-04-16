@@ -6,12 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:47:06 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:50:39 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:59:53 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <stdio.h>
+#include "../Includes/libft.h"
 #include <ctype.h>
 
 int	ft_isalpha(int c)

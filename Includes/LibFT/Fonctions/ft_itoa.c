@@ -6,13 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:40:07 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:50:53 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 16:00:11 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "../Includes/libft.h"
 #include <limits.h>
 
 char	*ft_alloc(int *i, int signe, long n)

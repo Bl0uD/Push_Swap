@@ -6,12 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 21:18:26 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:52:41 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:58:27 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <string.h>
+#include "../Includes/libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

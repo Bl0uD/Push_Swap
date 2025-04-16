@@ -6,13 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:01:03 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:52:55 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:58:16 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <string.h>
-#include <stdio.h>
+#include "../Includes/libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

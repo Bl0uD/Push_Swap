@@ -6,11 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 23:18:09 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:51:10 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:55:10 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../Includes/libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {

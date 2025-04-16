@@ -6,13 +6,12 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 15:24:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:50:24 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:59:30 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "../Includes/libft.h"
+
 
 long	ft_atol(char *str)
 {

@@ -6,14 +6,12 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:02:33 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:53:10 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:57:47 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #define _GNU_SOURCE
-#include <string.h>
-#include "../libft.h"
-#include <stdio.h>
+#include "../Includes/libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

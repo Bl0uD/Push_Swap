@@ -6,11 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:01:14 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:53:07 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:57:17 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../Includes/libft.h"
 
 char	*ft_strnstr(const char *str, const char *finder, size_t len)
 {

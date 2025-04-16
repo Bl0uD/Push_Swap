@@ -6,13 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:34:34 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:51:32 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 16:00:51 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <stdlib.h>
-#include <stdio.h>
+#include "../Includes/libft.h"
 
 void	ft_memdel(void **ap)
 {

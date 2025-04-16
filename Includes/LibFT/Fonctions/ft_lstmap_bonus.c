@@ -6,11 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 23:19:12 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:51:12 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:55:12 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../Includes/libft.h"
 
 t_list	*create_new_node(void *(*f)(void *), t_list *lst, void (*del)(void *))
 {

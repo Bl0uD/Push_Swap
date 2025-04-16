@@ -6,7 +6,7 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 20:26:49 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 02:14:27 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 18:14:17 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdint.h>
 # include <stdio.h>
 # include <string.h>
+# include <limits.h>
 
 typedef struct s_list
 {

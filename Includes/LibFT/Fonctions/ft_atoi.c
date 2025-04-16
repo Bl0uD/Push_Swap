@@ -6,13 +6,12 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 10:04:20 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:50:04 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:59:27 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "../Includes/libft.h"
+
 
 int	ft_atoi(const char *str)
 {

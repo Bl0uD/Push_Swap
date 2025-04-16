@@ -6,12 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:48:44 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:50:45 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 16:00:00 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <stdio.h>
+#include "../Includes/libft.h"
 #include <ctype.h>
 
 int	ft_isdigit(int c)

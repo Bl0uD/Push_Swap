@@ -6,7 +6,7 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 20:07:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 02:21:40 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 16:42:43 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ int	check_args(int ac, char **av)
 	while (i < ac)
 	{
 		if (!is_number(av[i]))
+			return (0);
+		if (ft_strlen(av[i]) > 11)
 			return (0);
 		num = ft_atol(av[i]);
 		if (num > INT_MAX || num < INT_MIN)

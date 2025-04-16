@@ -6,7 +6,7 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 21:50:17 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/08 22:45:06 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 23:59:08 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,18 @@
 int	ps_push(t_stack **stack_to, t_stack **stack_from)
 {
 	t_stack	*temp;
+	int		saved_index;
 
 	if (!stack_from || !(*stack_from))
 		return (-1);
 	temp = *stack_from;
+	saved_index = temp->index;
 	*stack_from = (*stack_from)->next;
 	if (*stack_from)
 		(*stack_from)->prev = NULL;
 	temp->next = *stack_to;
 	temp->prev = NULL;
+	temp->index = saved_index;
 	if (*stack_to)
 		(*stack_to)->prev = temp;
 	*stack_to = temp;

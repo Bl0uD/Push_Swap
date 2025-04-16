@@ -6,13 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:58:35 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:52:10 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:59:09 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <stdio.h>
-#include <string.h>
+#include "../Includes/libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -26,15 +24,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (NULL);
 }
-/*
-int	main(void)
-{
-	char	*str = "teste";
-	int		c;
-
-	c = 1024;
-	printf("my owm : %p\n",ft_strchr(str, c));
-	printf("real : %p\n",strchr(str, c));
-	return (0);
-}
-*/

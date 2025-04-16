@@ -6,11 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:36:10 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:52:37 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:56:35 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../Includes/libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

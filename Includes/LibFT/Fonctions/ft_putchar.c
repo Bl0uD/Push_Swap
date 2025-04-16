@@ -6,12 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:34:51 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:51:46 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 16:01:45 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <unistd.h>
+#include "../Includes/libft.h"
 
 void	ft_putchar(char c)
 {

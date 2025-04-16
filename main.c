@@ -6,7 +6,7 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 20:33:20 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 15:20:35 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/17 00:15:07 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ t_stack	*create_stack(int ac, char **av)
 			return (NULL);
 		}
 		new->value = ft_atol(av[i]);
+		new->index = -1;  // Ajout de l'initialisation de l'index
 		new->next = NULL;
 		new->prev = NULL;
 		add_to_stack(&stack, new);
@@ -71,41 +72,32 @@ t_stack	*create_stack(int ac, char **av)
 
 int	main(int ac, char **av)
 {
-    t_stack	*stack_a;
-    t_stack	*stack_b;
+	t_stack *stack_a;
+	t_stack *stack_b;
 
-    stack_b = NULL;
-    if (ac < 2)
-        return (0);
-    if (!check_args(ac, av))
-    {
-        write(2, "Error\n", 6);
-        return (1);
-    }
-    stack_a = create_stack(ac, av);
-    if (!stack_a || !check_doubles(stack_a))
-    {
-        write(2, "Error\n", 6);
-        free_stack(&stack_a);
-        return (1);
-    }
+	stack_b = NULL;
+	if (ac < 2)
+		return (PS_OK);
 
-    printf("\nÉtat initial :\n");
-    print_stack(stack_a, 'A');
+	// Vérification des arguments
+	if (!check_args(ac, av))
+		ps_error(PS_INVALID_ARG, NULL, NULL);
 
-    ps_sa(&stack_a);
-    printf("\nAprès sa :\n");
-    print_stack(stack_a, 'A');
+	// Création de la pile
+	stack_a = create_stack(ac, av);
+	if (!stack_a)
+		ps_error(PS_MALLOC_ERROR, NULL, NULL);
 
-    ps_ra(&stack_a);
-    printf("\nAprès ra :\n");
-    print_stack(stack_a, 'A');
+	// Vérification des doublons
+	if (!check_doubles(stack_a))
+		ps_error(PS_DUPLICATE, &stack_a, &stack_b);
 
-    ps_rra(&stack_a);
-    printf("\nAprès rra :\n");
-    print_stack(stack_a, 'A');
+	// Tri
+	if (!is_sorted(stack_a))
+		ps_sort_stack(&stack_a, &stack_b, ac - 1);
 
-    free_stack(&stack_a);
-    free_stack(&stack_b);
-    return (0);
+	// Nettoyage
+	free_stack(&stack_a);
+	free_stack(&stack_b);
+	return (PS_OK);
 }

@@ -6,11 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 21:32:41 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:53:17 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:57:01 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../Includes/libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

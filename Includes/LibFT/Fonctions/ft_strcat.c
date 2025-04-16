@@ -6,14 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:57:39 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:52:07 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:58:51 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "../Includes/libft.h"
 
 char	*ft_strcat(char *dest, const char *str)
 {

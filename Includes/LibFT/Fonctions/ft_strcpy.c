@@ -6,11 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:59:02 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:52:17 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:56:22 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../Includes/libft.h"
 
 char	*ft_strcpy(char *dest, const char *str)
 {

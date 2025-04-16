@@ -6,14 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:49:50 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:51:30 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 16:00:48 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "../Includes/libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

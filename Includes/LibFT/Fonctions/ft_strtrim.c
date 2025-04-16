@@ -6,11 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:39:23 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:53:14 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/16 15:57:03 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../Includes/libft.h"
 
 int	ft_incharset(char s, char const *charset)
 {
