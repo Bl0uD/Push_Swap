@@ -6,7 +6,7 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 16:42:36 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 02:21:50 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/09 15:08:01 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int			check_args(int ac, char **av);
 t_stack		*create_stack(int ac, char **av);
 void		free_stack(t_stack **stack);
 int			check_doubles(t_stack *stack);
+void		add_to_stack(t_stack **stack, t_stack *new);
 
 // Prototypes des fonctions
 int			ps_push(t_stack **stack_to, t_stack **stack_from);

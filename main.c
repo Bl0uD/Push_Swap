@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 20:33:20 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/09 01:41:43 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/09 15:20:35 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	free_stack(t_stack **stack)
 }
 
 
-static void	add_to_stack(t_stack **stack, t_stack *new)
+void	add_to_stack(t_stack **stack, t_stack *new)
 {
 	t_stack	*temp;
 
