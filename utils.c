@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
+/*   By: bloud <bloud@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/17 00:55:08 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/17 02:00:04 by bloud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,52 +93,10 @@ int	find_min_pos(t_stack *stack)
 		if (temp->value < min)
 		{
 			min = temp->value;
-		position = i;
+			position = i;
 		}
 		i++;
 		temp = temp->next;
 	}
 	return (position);
-}
-
-void	ps_error(int error_code, t_stack **stack_a, t_stack **stack_b)
-{
-	if (stack_a)
-		free_stack(stack_a);
-	if (stack_b)
-		free_stack(stack_b);
-
-	if (error_code != PS_OK)
-		write(2, ERR_MSG, 6);
-	if (error_code == PS_OK)
-		exit(0);
-	else
-		exit(1);
-}
-
-int    find_closest_in_chunk(t_stack *stack, int min, int max, int size)
-{
-    int    top_dist;
-    int    bottom_dist;
-    t_stack *temp;
-    
-    top_dist = 0;
-    temp = stack;
-    while (temp && (temp->index < min || temp->index >= max))
-    {
-        top_dist++;
-        temp = temp->next;
-    }
-    
-    bottom_dist = 0;
-    temp = stack;
-    while (temp->next)
-        temp = temp->next;
-    while (temp && (temp->index < min || temp->index >= max))
-    {
-        bottom_dist++;
-        temp = temp->prev;
-    }
-    
-    return (top_dist < (size - bottom_dist) ? top_dist : size - bottom_dist);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ps_sort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
+/*   By: bloud <bloud@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 22:48:44 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/17 00:30:56 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/17 02:02:04 by bloud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ void	ps_sort_three(t_stack **stack_a)
 	first = (*stack_a)->value;
 	second = (*stack_a)->next->value;
 	third = (*stack_a)->next->next->value;
-
 	if (first > second && second < third && first < third)
 		ps_sa(stack_a);
 	else if (first > second && second > third)

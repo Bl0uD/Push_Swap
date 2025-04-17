@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
+/*   By: bloud <bloud@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 16:42:36 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/17 00:55:38 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/17 03:17:15 by bloud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,15 @@ int			ps_stacksize(t_stack *stack);
 int			is_sorted(t_stack *stack);
 void		print_stack(t_stack *stack, char name);
 int			find_min_pos(t_stack *stack);
-int    		find_closest_in_chunk(t_stack *stack, int min, int max, int size);
+int			closest_in_chunk(t_stack *stack, int min, int max, int size);
 
 // Gestion des erreurs
 void		ps_error(int error_code, t_stack **stack_a, t_stack **stack_b);
+
+// silly :3
+size_t		strstrlen(char **a);
+void		ft_free(char **str);
+void		call_free(int defaultSw, char **ptr);
 
 // Codes d'erreur
 # define PS_OK 0

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
+/*   By: bloud <bloud@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 15:24:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/16 15:59:30 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/17 02:01:38 by bloud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Includes/libft.h"
-
 
 long	ft_atol(char *str)
 {

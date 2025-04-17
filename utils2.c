@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
+/*   By: bloud <bloud@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 19:34:41 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/16 15:30:16 by jdupuis          ###   ########.fr       */
+/*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
+/*   Updated: 2025/04/17 03:16:39 by bloud            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Includes/ft_printf.h"
+#include "Includes/push_swap.h"
 
-int	ft_putchar_fd(char c, int fd)
+void	call_free(int defaultSw, char **ptr)
 {
-	write(fd, &c, 1);
-	return (1);
+	if (defaultSw == 2)
+		ft_free(ptr);
 }
