@@ -1,8 +1,8 @@
 NAME = push_swap
 
 SRC = ./main.c \
-		./utils.c \
-		./utils2.c \
+		./Utils/utils.c \
+		./Utils/utils2.c \
 		./Algorithms/ps_sort.c \
 		./Algorithms/ps_sort_big.c \
 		./Parsing/ps_check_parsing.c \

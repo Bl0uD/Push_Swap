@@ -6,11 +6,11 @@
 /*   By: jdupuis <jdupuis@student.42perpignan.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 22:12:32 by jdupuis           #+#    #+#             */
-/*   Updated: 2025/04/17 03:20:27 by jdupuis          ###   ########.fr       */
+/*   Updated: 2025/04/17 13:04:38 by jdupuis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Includes/push_swap.h"
+#include "../Includes/push_swap.h"
 
 void	print_stack(t_stack *stack, char name)
 {

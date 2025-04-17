@@ -31,5 +31,7 @@ generate_random() {
 generate_random 1 100 100 > shuffled.txt
 #generate_random 1 500 500 > shuffled.txt
 
+make re
+
 # Tester push_swap avec ces nombres
 ./push_swap $(cat shuffled.txt)
