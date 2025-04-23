@@ -33,4 +33,9 @@ re: fclean all
 libft:
 	make -C ./Includes/LibFT
 
+dev :
+	make fclean
+	git add .; git commit -m "auto/dev"; git push
+	make all
+
 .PHONY: all clean fclean re libft
