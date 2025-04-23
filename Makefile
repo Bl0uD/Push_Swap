@@ -18,7 +18,7 @@ all: $(NAME)
 
 $(NAME):
 	make libft
-	$(CC) $(CFLAGS) $(SRC) ./Includes/LibFT/libft.a -g -o $(NAME)
+	$(CC) $(CFLAGS) $(SRC) ./Includes/LibFT/libft.a -o $(NAME)
 
 clean:
 	make -C ./Includes/LibFT clean
