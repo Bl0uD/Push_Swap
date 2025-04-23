@@ -28,8 +28,8 @@ generate_random() {
 }
 
 # Générer 100 nombres aléatoires de 1 à 100
-generate_random 1 100 100 > shuffled.txt
-#generate_random 1 500 500 > shuffled.txt
+#generate_random 1 100 100 > shuffled.txt
+generate_random 1 500 500 > shuffled.txt
 
 make re
 
